@@ -1,0 +1,115 @@
+body {
+    background-color: #242526;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+header {
+    /*font-family: 'Open Sans', sans-serif;*/
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+}
+
+
+/* STYLE NOTES: off white text: #3A3B3C , 
+ *              header light gray: #2F3136,
+ *              main background dark gray: #242526,
+ *              text input color: #40444B;
+
+ */
+.headerbar {
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2F3136;
+    padding: 0 4vw;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    color: white; 
+}
+
+/* 'spaceship' logo in header */
+.logo span {
+    /*font-family; 'Open Sans', sans-serif;*/
+    font-size: 2rem;
+    font-weight: 800;
+    color: #E4E6EB;
+    /*background: ;*/
+}
+
+.menuBtn {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    /*color: white;*/
+}
+
+/* menu once dropped down from hamburger */ 
+.menu {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 70px);
+    background: #2F3136;
+    transform: translateY(-100%);
+    transition: transform .25s ease;
+}
+
+.visible {
+    transform: none;
+}
+
+.menu div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* menu options once menu drops down */
+.menu a {
+    all: unset;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu span {
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #E4E6EB;
+}
+
+
+/* background of the mypackages page */
+.mypackages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #242526;
+    color: #E4E6EB;
+}
+
+.package {
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #6B717C;
+    border-radius: 8px 8px 8px 8px;
+    margin-bottom: 2rem;
+}

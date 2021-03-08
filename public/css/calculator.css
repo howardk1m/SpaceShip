@@ -1,0 +1,205 @@
+body {
+    background-color: #242526;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+header {
+    /*font-family: 'Open Sans', sans-serif;*/
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+}
+
+
+/* STYLE NOTES: off white text: #3A3B3C , 
+ *              header light gray: #2F3136,
+ *              main background dark gray: #242526,
+ *              text input color: #40444B;
+
+ */
+.headerbar {
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2F3136;
+    padding: 0 4vw;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    color: white; 
+}
+
+/* 'spaceship' logo in header */
+.logo span {
+    /*font-family; 'Open Sans', sans-serif;*/
+    font-size: 2rem;
+    font-weight: 800;
+    color: #E4E6EB;
+    /*background: ;*/
+}
+
+.menuBtn {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    /*color: white;*/
+}
+
+/* menu once dropped down from hamburger */ 
+.menu {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 70px);
+    background: #2F3136;
+    transform: translateY(-100%);
+    transition: transform .25s ease;
+}
+
+.visible {
+    transform: none;
+}
+
+.menu div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* menu options once menu drops down */
+.menu a {
+    all: unset;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu span {
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #E4E6EB;
+}
+
+/* main calculator page */ 
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5em;
+    background: #242526;
+    color: #E4E6EB; /* text color */ 
+}
+
+h4, .h4 {
+    margin-top: 15;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+/*all input boxes and calculator (other than title) */ 
+form {
+    display: flex;
+    flex-direction: column;
+    margin: -1 5vw;
+}
+
+input {
+    border-radius: 5px 5px 5px 5px; /*edges of the input boxes*/ 
+    margin: 5px;
+    font-size: 1.3rem;
+    /*font-size: 12px;*/
+    background-color: #40444B;
+    color: white;
+}
+
+select {
+    background-color: #40444B;
+    font-size: 1.3rem;
+    color: #727273;
+
+}
+/*
+input[type=number]{
+    background-color: #40444B ;
+}
+
+input[type=text]{
+    background-color: #40444B ;
+}*/
+
+
+.secondLine {
+    display: flex;
+    flex-direction: row;
+}
+
+/*all package dimensions and weight*/
+.dimension {
+    display: inline-flex;
+    flex-direction: row;
+    height: 33px;
+
+}
+
+/*.dimension input { 
+    display: inline-block;
+    flex-direction: row;
+    height: 28px;
+}*/
+
+/*units options box*/
+.dimension select {
+    height: 29px; 
+    display: flex;
+    flex-direction: row;
+}
+
+.insValue {
+    display: none;
+    margin-top:-4px;
+}
+
+.visible1 {
+    display: block;
+    margin-top: 4px;
+}
+
+.checkboxes {
+    margin-top: 10px;
+    display: grid; 
+    grid-template-rows: 25px 25px;
+    grid-gap: -50px;
+}
+/*.submitBtn {
+    margin-top: 5vh;
+}*/
+
+.wrapper {
+    margin-top: 20px;
+    background-color: #1C3E5E; 
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+ /* top: 50%;
+  left: 50%;*/
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    /*background-color: rgb(12, 97, 33);
+    /*background-color: #327cad; */
+    /*background-color: #055ebb;*/
+/*}

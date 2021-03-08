@@ -1,0 +1,28 @@
+{
+  "packages": [
+    {
+      "origin": {
+        "address_line1": "1 Washington Square",
+        "address_line2": "",
+        "city_locality": "San Jose",
+        "state_province": "CA",
+        "postal_code": "95192",
+        "country_code": "US"
+      },
+      "destination": {
+        "address_line1": "9500 Gilman Drive",
+        "address_line2": "",
+        "city_locality": "La Jolla",
+        "state_province": "CA",
+        "postal_code": "92093",
+        "country_code": "US"
+      },
+      "package": {
+        "length": "10 Inches",
+        "width": "10 Inches",
+        "height": "10 Inches",
+        "weight": "10 Pounds"
+      }
+    }
+  ]
+}

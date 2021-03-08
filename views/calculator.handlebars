@@ -1,0 +1,128 @@
+<html>
+
+<head>
+	<title>SpaceShip by Team Astronauts</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+			font-family: 'Open Sans', 'Helvetica', sans-serif;
+		}
+	</style>
+
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/calculator.css" rel="stylesheet">
+	<script src="/js/calculator.js"></script>
+</head>
+
+<body>
+	{{> navbar}}
+	<div class="calculator">
+		<h3>
+			<SPAN STYLE="font-size: 25pt">Shipping Calculator</SPAN>
+		</h3>
+		<form id="packageForm">
+			<h4>Origin</h4>
+			<input id="fromaddress1" type="text" placeholder="Street Address*" required>
+			</style>
+			<input id="fromaddress2" type="text" placeholder="Apartment/Suite/Other">
+			<div class="secondLine">
+				<input type="text" placeholder="City*" style="width: 50%" required id="fromCity" name="fromCity">
+				<input type="text" placeholder="State*" maxlength="2" style="width: 15%"
+					oninput="this.value = this.value.toUpperCase()" required id="fromState" name="fromState">
+				<input type="number" placeholder="Zipcode*" style="width: 35%" minlength="5" maxlength="5" required
+					id="fromZip" name="fromZip">
+			</div>
+
+			<h4>Destination</h4>
+			<input id="toaddress1" type="text" placeholder="Street Address*" required>
+			<input id="toaddress2" type="text" placeholder="Apartment/Suite/Other">
+			<div class="secondLine">
+				<input type="text" placeholder="City*" style="width: 90%" required id="toCity" name="toCity">
+				<input type="text" placeholder="State*" maxlength="2" style="width: 90%"
+					oninput="this.value = this.value.toUpperCase()" required id="toState" name="toState">
+				<input type="number" placeholder="Zipcode*" style="width: 100%" minlength="5" maxlength="5" required
+					id="toZip" name="toZip">
+			</div>
+
+			<h4>Package Dimensions</h4>
+			<div class="dimension">
+				<input id="length" type="number" placeholder="Length*" style="width: 60%" required>
+				<select id="lengthD" style="width: 30%">
+					<option>Inches</option>
+					<option>Millimeters</option>
+				</select>
+			</div>
+			<div class="dimension">
+				<input id="width" type="number" placeholder="Width*" style="width: 60%" required>
+				<select id="widthD" style="width: 30%">
+					<option>Inches</option>
+					<option>Millimeters</option>
+				</select>
+			</div>
+			<div class="dimension">
+				<input id="height" type="number" placeholder="Height*" style="width: 60%" required>
+				<select id="heightD" style="width: 30%">
+					<option>Inches</option>
+					<option>Millimeters</option>
+				</select>
+			</div>
+
+			<h4>Package Weight</h4>
+			<div class="dimension">
+				<input id="weight" type="number" placeholder="Weight*" style="width: 60%" required>
+				<select id="weightD" style="width: 30%">
+					<option>Pounds</option>
+					<option>Kilograms</option>
+				</select>
+			</div>
+
+			<h4>Options</h4>
+
+			<div class="checkboxes">
+				<label>
+					<input type="checkbox" id="check1">
+					Signature Confirmation
+				</label>
+				
+				<label>
+					<input type="checkbox" class="insCheck">
+					Package Insurance
+				</label>
+				<div class="insValue">
+					<input type="number" placeholder="Package Value ($)" style="width: 100%" js-trim-chars="$ ">
+				</div>
+				<script>
+
+					(function () {
+						var check = document.querySelector(".insCheck");
+						var value = document.querySelector(".insValue");
+						check.onclick = function () {
+							value.classList.toggle("visible1");
+						}
+					})();
+
+				</script>
+			</div>
+
+			<div id="wrapper">
+				<button id="addBtn" class="btn btnd-lg btn-primary" type="submit" style="width: 45%">
+					Add Package
+				</button>
+				<button id="calcBtn" class="btn btnd-lg btn-primary ml-3" type="submit" style="width: 50%" formaction="/results">
+					Calculate Rates
+				</button>
+			</div>
+		</form>
+	</div>
+
+</body>
+
+</html>
