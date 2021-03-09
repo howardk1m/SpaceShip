@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+
 	<link href="/css/index.css" rel="stylesheet">
 	<script src="/js/index.js"></script>
 
@@ -14,8 +15,7 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 	<!-- added for facebook login -->
-	{{> facebook}}
-	<script src="/js/facebook.js"></script>
+	{{>facebook}}
 </head>
 
 <body>
@@ -32,7 +32,7 @@
 				<b style="margin-bottom: 2rem;">Please login through Facebook</b>
 				<div class="fb-login-button" data-width="" data-size="medium" data-button-type="continue_with"
 					data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"
-					onlogin="checkLoginState();"></div>
+					onlogin="authUser();"></div>
 			</div>
 			<hr class="hr">
 			<nav class="navCol">
