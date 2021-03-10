@@ -2,41 +2,57 @@
 /**
  * Module dependencies.
  */
-
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var exphbs = require('express-handlebars')
+var bodyParser = require('body-parser');
+var morgan = require('morgan');
+var cookieParser = require('cookie-parser');
+// var expressSession = require('express-session');
+var errorHandler = require('errorhandler');
+var methodOverride = require('method-override');
 
+/**
+ * route controllers
+ */
 var index = require('./routes/index');
 var calculator = require('./routes/calculator');
 var results = require('./routes/results');
 var mypackages = require('./routes/mypackages');
 
+
 var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
+app.engine('handlebars', exphbs({defaultLayout: false}));
 app.set('view engine', 'handlebars');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(express.cookieParser('IxD secret key'));
-app.use(express.session());
-app.use(app.router);
+// app.use(express.favicon());
+// terminal logger currently disabled
+// app.use(morgan('combined'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride());
+app.use(cookieParser('IxD secret key'));
+// express session deprecated 
+// app.use(expressSession());
+// router depreciated in express 4
+// app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+  app.use(errorHandler());
 }
 
+/**
+ * express routes
+ */
 app.get('/', index.view);
 // app.get('/login', index.loginInfo);
 app.get('/calculator', calculator.view);
+app.post('/validate', calculator.validate);
 app.get('/results', results.rates);
 app.get('/mypackages', mypackages.view);
 app.post('/addpackage', mypackages.add);

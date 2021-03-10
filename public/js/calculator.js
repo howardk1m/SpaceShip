@@ -3,12 +3,13 @@ $(document).ready(function () {
 })
 
 function initializePage() {
-    console.log("page loaded");
+    console.log("Page loaded");
     initForm();
 }
 
 function initForm() {
-    $("#calcBtn").click(function () {
+    $("#calcBtn").click(function (e) {
+        e.preventDefault();
         console.log("calculating rates");
 
         var origin = getFromAddress(true);
@@ -118,20 +119,9 @@ function getPackage() {
 
 function validateAddress(addressJSON) {
 
-    var myHeaders = new Headers();
-    myHeaders.append("Host", "api.shipengine.com");
-    myHeaders.append("API-Key", "TEST_3kNoQV1BpQP/ixmlVGwHK0loRALWb3rZvatxpF2nhLI");
-    myHeaders.append("Content-Type", "application/json");
+    function postCallBack(res) {
+        console.log(JSON.parse(res));
+    }
 
-    var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: addressJSON,
-        redirect: 'follow'
-    };
-
-    fetch("https://api.shipengine.com/v1/addresses/validate", requestOptions)
-        .then(response => console.log(response.text()))
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+    $.post('validate', { addressJSON: addressJSON }, postCallBack);
 }
