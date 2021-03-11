@@ -52,7 +52,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 // app.get('/login', index.loginInfo);
 app.get('/calculator', calculator.view);
-app.post('/validate', calculator.validate);
+app.post('/calculate', results.calculate);
 app.get('/results', results.rates);
 app.get('/mypackages', mypackages.view);
 app.post('/addpackage', mypackages.add);
