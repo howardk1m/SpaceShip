@@ -1,4 +1,13 @@
+// dependency package for fetch Web API call
+const fetch = require('node-fetch');
+// server-side file to hold API fetched JSON
 var data = require("../data.json");
+// HTTP header for fetch API call
+const myHeaders = {
+  "Host": "api.shipengine.com",
+  "API-Key": "TEST_3kNoQV1BpQP/ixmlVGwHK0loRALWb3rZvatxpF2nhLI",
+  "Content-Type": "application/json",
+};
 
 // load page
 exports.view = function (req, res) {
@@ -7,16 +16,6 @@ exports.view = function (req, res) {
 
 // REST API call to fetch shipping rates
 exports.calculate = function (req, res) {
-
-  // dependency package for fetch Web API call
-  const fetch = require('node-fetch');
-
-  // HTTP header for fetch API call
-  const myHeaders = {
-    "Host": "api.shipengine.com",
-    "API-Key": "TEST_3kNoQV1BpQP/ixmlVGwHK0loRALWb3rZvatxpF2nhLI",
-    "Content-Type": "application/json",
-  }
 
   /**
    * Build API Call request

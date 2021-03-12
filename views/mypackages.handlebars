@@ -20,6 +20,7 @@
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/mypackages.css" rel="stylesheet">
+  <script src="/js/mypackages.js"></script>
 </head>
 
 <body>
@@ -27,12 +28,12 @@
   <div class="mypackages">
 
     <h2>
-      <SPAN STYLE="font-size: 25pt" , color="#gray">Packages</SPAN>
+      <SPAN STYLE="font-size: 25pt" , color="#gray">My Packages</SPAN>
     </h2>
 
     {{#if packages}}
     {{#each packages}}
-    <div class="package">
+    <div class="package" id={{this.shipment_id}}>
 
       <h5><b><u>Origin</u></b></h5>
       <div>
@@ -48,8 +49,14 @@
 
       <h5><b><u>Dimensions</u></b></h5>
       <div>
-        <p>{{this.package.length}} inches x {{this.package.width}} inches x {{this.package.height}} inches</p>
+        <p>{{this.package.length}} inches <b>x</b> {{this.package.width}} inches <b>x</b> {{this.package.height}} inches
+        </p>
         <p>{{this.package.weight}} ounces</p>
+      </div>
+
+      <div class="buttonRow">
+        <button class="btn btnd-lg btn-primary rateBtn" id="remove" type="button">Remove</button>
+        <button class="btn btnd-lg btn-primary rateBtn" id="rates" type="button">Rates</button>
       </div>
     </div>
     {{/each}}
