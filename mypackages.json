@@ -6,23 +6,22 @@
         "address_line2": "",
         "city_locality": "San Jose",
         "state_province": "CA",
-        "postal_code": "95192",
-        "country_code": "US"
+        "postal_code": "95192"
       },
       "destination": {
         "address_line1": "9500 Gilman Drive",
         "address_line2": "",
         "city_locality": "La Jolla",
         "state_province": "CA",
-        "postal_code": "92093",
-        "country_code": "US"
+        "postal_code": "92093"
       },
       "package": {
-        "length": "10 Inches",
-        "width": "10 Inches",
-        "height": "10 Inches",
-        "weight": "10 Pounds"
-      }
+        "length": "10",
+        "width": "10",
+        "height": "10",
+        "weight": "10"
+      },
+      "shipment_id": ""
     }
   ]
 }

@@ -48,11 +48,10 @@
 
       <h5><b><u>Dimensions</u></b></h5>
       <div>
-        <p>{{this.package.length}} x {{this.package.width}} x {{this.package.height}}</p>
-        <p>{{this.package.weight}}</p>
+        <p>{{this.package.length}} inches x {{this.package.width}} inches x {{this.package.height}} inches</p>
+        <p>{{this.package.weight}} ounces</p>
       </div>
     </div>
-    {{log this}}
     {{/each}}
     {{else}}
     <p>No packages to show!</p>

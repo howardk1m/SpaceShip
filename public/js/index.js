@@ -39,7 +39,23 @@ function checkLoginStatus(response) {
 }
 
 function changeUser() {
-    //Add code to change name and image 
+    // get user packages from user's local storage
+    var userPackages = localStorage.myPackages;
+    // if user has package array
+    if (userPackages != null) {
+        // parse the array into JSON
+        var userPackagesJSON = JSON.parse(userPackages);
+    } else { // else if package array DNE
+        // create a new JSON array
+        var userPackagesJSON = { "packages": [] };
+    }
+    userPackages = JSON.stringify(userPackagesJSON);
+    $.post('addPackages', { packages: userPackages }, postCallBack);
+
+    function postCallBack(res) {
+        console.log(res);
+    }
+
     $(".Login").hide();
     $("hr").show();
     getNav();

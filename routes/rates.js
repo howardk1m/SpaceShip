@@ -15,3 +15,7 @@ exports.view = function (req, res) {
 
   res.render('rates', data);
 };
+
+exports.data = function (req, res) {
+  res.json(data);
+}

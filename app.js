@@ -56,8 +56,9 @@ app.get('/', index.view);
 app.get('/calculator', calculator.view);
 app.post('/calculate', calculator.calculate);
 app.get('/rates', rates.view);
+app.get('/data', rates.data);
 app.get('/mypackages', mypackages.view);
-app.post('/addpackage', mypackages.add);
+app.post('/addpackages', mypackages.fill);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

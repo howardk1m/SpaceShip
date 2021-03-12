@@ -3,21 +3,21 @@
 <head>
     <title>Rates | SpaceShip</title>
     <meta charset="utf-8">
-
-<!-- use Open Sans as main font. import from google  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- use Open Sans as main font. import from google  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <style> 
-        body { 
+    <style>
+        body {
             font-family: 'Open Sans', 'Helvetica', sans-serif;
         }
     </style>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/css/results.css" rel="stylesheet">
+    <link href="/css/rates.css" rel="stylesheet">
+    <script src="/js/rates.js"></script>
 </head>
 
 <body>
@@ -25,35 +25,42 @@
 
     <div class="results">
         <h2>
-            <SPAN STYLE = "font-size: 25pt", color="#gray">Shipping Options</SPAN>
+            <SPAN STYLE="font-size: 25pt" , color="#gray">Shipping Options</SPAN>
         </h2>
-
-<!-- added a back button -->
-        <form>
-                <input type="button" value="Go back!" onclick="history.back()">
-        </form>
 
         <div class="details">
             <h4>Shipment Details</h4>
             <div class="detail-location">
                 <b>Origin:&nbsp;</b>
-                <p>{{response.ship_from.city_locality}}, {{response.ship_from.state_province}}, {{response.ship_from.postal_code}}</p>
+                <p>{{response.ship_from.city_locality}}, {{response.ship_from.state_province}},
+                    {{response.ship_from.postal_code}}</p>
             </div>
             <div class="detail-location">
                 <b>Destination:&nbsp;</b>
-                <p>{{response.ship_to.city_locality}}, {{response.ship_to.state_province}}, {{response.ship_to.postal_code}}</p>
+                <p>{{response.ship_to.city_locality}}, {{response.ship_to.state_province}},
+                    {{response.ship_to.postal_code}}</p>
             </div>
+        </div>
+
+        <div class="buttonRow">
+            <button class="btn btnd-lg btn-primary rateBtn" onclick="history.back()" type="button">Previous</button>
+            <button class="btn btnd-lg btn-primary rateBtn" id="addPackage" type="button">Add Package</button>
+            <button class="btn btnd-lg btn-primary rateBtn" onclick="window.location.href='/calculator'"
+                type="button">New Package</button>
         </div>
 
         {{#each response.rate_response.rates}}
         <div class="options">
             <div class="img">
-                <img src="#" alt="carrierlogo" class="carrierimg img-responsive img-rounded"/>
+                <img src="#" alt="carrierlogo" class="carrierimg img-responsive img-rounded" />
             </div>
             <div style="width: 60%; justify-content: flex-end;">
-                <p style="margin: 0;"><b>Service: </b>{{service_type}}</p>
-                <p style="margin: 0.5rem 0;"><b>Delivery: </b>{{delivery_days}} days</p>
-                <p style="margin: 0;"><b>Price: </b>${{shipping_amount.amount}}</p>
+                <p style="margin: 0.25rem 0;"><b><u>Service</u>: </b>{{service_type}}</p>
+                <p style="margin: 0.25rem 0;"><b><u>Delivery</u>: </b>{{delivery_days}} days</p>
+                <p style="margin: 0.25rem 0;"><b><u>Service Cost</u>: </b>${{shipping_amount.amount}}</p>
+                {{#if insurance_amount.amount}}
+                <p style="margin: 0.25rem 0;"><b><u>Insurance Cost</u>: </b>${{insurance_amount.amount}}</p>
+                {{/if}}
             </div>
             <script data={{carrier_code}}>
                 var img = document.getElementsByClassName("carrierimg")[{{@index}}];
@@ -67,9 +74,6 @@
             </script>
         </div>
         {{/each}}
-
-        <!-- Button to go back to calculate another package -->
-        {{!-- <button id=button class="btn btnd-lg btn-primary btn-block btn-signin" onclick="history.back()" type="button"> Calculate another package</button> --}}
     </div>
 
 </body>
