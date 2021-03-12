@@ -23,8 +23,14 @@ function initForm() {
 function getRates(from, to, package) {
     $.post('calculate', { ship_from: from, ship_to: to, package: package }, postCallBack);
     function postCallBack(res) {
-        // console.log(res);
-        window.location.href = "/rates";
+        var resJSON = JSON.parse(res);
+        if (resJSON.rate_response) {
+            window.location.href = "/rates";
+        } else {
+            if (resJSON.errors){
+                alert(resJSON.errors[0].message);
+            }
+        }
     }
 }
 
