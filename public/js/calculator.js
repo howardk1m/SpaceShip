@@ -21,11 +21,11 @@ function initForm() {
 }
 
 function getRates(from, to, package) {
-
-    // function postCallBack(res) {
-    //     console.log(JSON.parse(res));
-    // }
-    $.post('calculate', { ship_from: from, ship_to: to, package: package });
+    $.post('calculate', { ship_from: from, ship_to: to, package: package }, postCallBack);
+    function postCallBack(res) {
+        // console.log(res);
+        window.location.href = "/rates";
+    }
 }
 
 
@@ -75,18 +75,12 @@ function getToAddress() {
 
 function getPackage() {
     var length = $("#length").val();
-    // var lengthD = $("#lengthD option:selected").val();
     var width = $("#width").val();
-    // var widthD = $("#widthD option:selected").val();
     var height = $("#height").val();
-    // var heightD = $("#heightD option:selected").val();
     var weight = $("#weight").val();
-    // var weightD = $("#weightD option:selected").val();
-    if ($(".insCheck").is(":checked")) {
-        var value = $("#value").val();
-    } else {
-        var value = 0;
-    }
+
+    if ($(".insCheck").is(":checked")) { var value = $("#value").val(); }
+    else { var value = 0; }
 
     var dimension = JSON.stringify({
         "length": length,

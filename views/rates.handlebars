@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>SpaceShip by Team Astronauts</title>
+    <title>Rates | SpaceShip</title>
     <meta charset="utf-8">
 
 <!-- use Open Sans as main font. import from google  -->
@@ -34,34 +34,34 @@
         </form>
 
         <div class="details">
-            <h4>Shipping Details</h4>
+            <h4>Shipment Details</h4>
             <div class="detail-location">
                 <b>Origin:&nbsp;</b>
-                <p>{{details.fromCity}}, {{details.fromState}}, {{details.fromZip}}</p>
+                <p>{{response.ship_from.city_locality}}, {{response.ship_from.state_province}}, {{response.ship_from.postal_code}}</p>
             </div>
             <div class="detail-location">
                 <b>Destination:&nbsp;</b>
-                <p>{{details.toCity}}, {{details.toState}}, {{details.toZip}}</p>
+                <p>{{response.ship_to.city_locality}}, {{response.ship_to.state_province}}, {{response.ship_to.postal_code}}</p>
             </div>
         </div>
 
-        {{#each options}}
+        {{#each response.rate_response.rates}}
         <div class="options">
             <div class="img">
                 <img src="#" alt="carrierlogo" class="carrierimg img-responsive img-rounded"/>
             </div>
             <div style="width: 60%; justify-content: flex-end;">
-                <p style="margin: 0;"><b>Service: </b>{{service}}</p>
-                <p style="margin: 0.5rem 0;"><b>Time: </b>{{time}}</p>
-                <p style="margin: 0;"><b>Price: </b>{{price}}</p>
+                <p style="margin: 0;"><b>Service: </b>{{service_type}}</p>
+                <p style="margin: 0.5rem 0;"><b>Delivery: </b>{{delivery_days}} days</p>
+                <p style="margin: 0;"><b>Price: </b>${{shipping_amount.amount}}</p>
             </div>
-            <script data={{carrier}}>
+            <script data={{carrier_code}}>
                 var img = document.getElementsByClassName("carrierimg")[{{@index}}];
-                if (document.currentScript.getAttribute('data') === "USPS") {
+                if (document.currentScript.getAttribute('data') === "stamps_com") {
                     img.setAttribute("src", "https://mailomg.files.wordpress.com/2017/09/usps_eagle-symbol.png");
-                } else if (document.currentScript.getAttribute('data') == "FedEx") {
+                } else if (document.currentScript.getAttribute('data') == "fedex") {
                     img.setAttribute("src", "http://4.bp.blogspot.com/-8qFlLqWHhqI/U6gzRjwnayI/AAAAAAAAgPo/miK3bshfv_k/s1600/FedEx+logo+1994.png");
-                } else if (document.currentScript.getAttribute('data') == "UPS") {
+                } else if (document.currentScript.getAttribute('data') == "ups") {
                     img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/1200px-United_Parcel_Service_logo_2014.svg.png");
                 }
             </script>
@@ -69,7 +69,7 @@
         {{/each}}
 
         <!-- Button to go back to calculate another package -->
-        <button id=button class="btn btnd-lg btn-primary btn-block btn-signin" onclick="history.back()" type="button"> Calculate another package</button>
+        {{!-- <button id=button class="btn btnd-lg btn-primary btn-block btn-signin" onclick="history.back()" type="button"> Calculate another package</button> --}}
     </div>
 
 </body>

@@ -1,551 +1,513 @@
 {
-	"options": [
-		{
-			"carrier": "USPS",
-            "service": "Priority Mail",
-            "price": "$15.68",
-            "time": "3-4 days"
-		},
-		{
-			"carrier": "FedEx",
-            "service": "First Overnight",
-            "price": "$78.69",
-            "time": "1 day"			
-		},
-		{
-			"carrier": "UPS",
-            "service": "Ground",
-            "price": "$18.68",
-            "time": "7-9 days"		
-		},
-		{
-			"carrier": "FedEx",
-            "service": "Ground",
-            "price": "$17.28",
-            "time": "8-9 days"		
-		},
-		{
-			"carrier": "USPS",
-            "service": "Priority Mail Express",
-            "price": "$40.12",
-            "time": "1-2 days"
-		},
-		{
-			"carrier": "FedEx",
-            "service": "2Day",
-            "price": "$42.91",
-            "time": "2 days"
-		}
-	]
-},
-{
-	"rate_response": {
-	  "rates": [
-		{
-		  "rate_id": "se-524343290",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553571",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 19.49
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 3.45
-		  },
-		  "zone": null,
-		  "package_type": "package",
-		  "delivery_days": 2,
-		  "guaranteed_service": true,
-		  "estimated_delivery_date": "2021-03-12T23:00:00Z",
-		  "carrier_delivery_days": "Friday 3/12 by 11:00 PM",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "UPS® Ground",
-		  "service_code": "ups_ground",
-		  "trackable": true,
-		  "carrier_code": "ups",
-		  "carrier_nickname": "ShipEngine Test Account - UPS",
-		  "carrier_friendly_name": "UPS",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $100."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343291",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553571",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 33.96
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 3.45
-		  },
-		  "zone": null,
-		  "package_type": "package",
-		  "delivery_days": 3,
-		  "guaranteed_service": true,
-		  "estimated_delivery_date": "2021-03-13T23:00:00Z",
-		  "carrier_delivery_days": "Saturday 3/13 by 11:00 PM",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "UPS 3 Day Select®",
-		  "service_code": "ups_3_day_select",
-		  "trackable": true,
-		  "carrier_code": "ups",
-		  "carrier_nickname": "ShipEngine Test Account - UPS",
-		  "carrier_friendly_name": "UPS",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $100."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343292",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553571",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 43.86
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 3.45
-		  },
-		  "zone": null,
-		  "package_type": "package",
-		  "delivery_days": 2,
-		  "guaranteed_service": true,
-		  "estimated_delivery_date": "2021-03-12T23:00:00Z",
-		  "carrier_delivery_days": "Friday 3/12 by 11:00 PM",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "UPS 2nd Day Air®",
-		  "service_code": "ups_2nd_day_air",
-		  "trackable": true,
-		  "carrier_code": "ups",
-		  "carrier_nickname": "ShipEngine Test Account - UPS",
-		  "carrier_friendly_name": "UPS",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $100."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343293",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553571",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 113.89
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 3.45
-		  },
-		  "zone": null,
-		  "package_type": "package",
-		  "delivery_days": 1,
-		  "guaranteed_service": true,
-		  "estimated_delivery_date": "2021-03-11T23:00:00Z",
-		  "carrier_delivery_days": "Tomorrow by 11:00 PM",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "UPS Next Day Air Saver®",
-		  "service_code": "ups_next_day_air_saver",
-		  "trackable": true,
-		  "carrier_code": "ups",
-		  "carrier_nickname": "ShipEngine Test Account - UPS",
-		  "carrier_friendly_name": "UPS",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $100."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343294",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553572",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 94.81
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 3.15
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 10.12
-		  },
-		  "zone": null,
-		  "package_type": "package",
-		  "delivery_days": 1,
-		  "guaranteed_service": false,
-		  "estimated_delivery_date": "2021-03-11T20:00:00Z",
-		  "carrier_delivery_days": "Tomorrow by 08:00 PM",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "FedEx Standard Overnight®",
-		  "service_code": "fedex_standard_overnight",
-		  "trackable": true,
-		  "carrier_code": "fedex",
-		  "carrier_nickname": "ShipEngine Test Account - FedEx",
-		  "carrier_friendly_name": "FedEx",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $100."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343295",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553572",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 29.01
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 3.15
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 6.50
-		  },
-		  "zone": null,
-		  "package_type": "package",
-		  "delivery_days": 5,
-		  "guaranteed_service": false,
-		  "estimated_delivery_date": "2021-03-15T20:00:00Z",
-		  "carrier_delivery_days": "Monday 3/15 by 08:00 PM",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "FedEx Express Saver®",
-		  "service_code": "fedex_express_saver",
-		  "trackable": true,
-		  "carrier_code": "fedex",
-		  "carrier_nickname": "ShipEngine Test Account - FedEx",
-		  "carrier_friendly_name": "FedEx",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $100."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343296",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553572",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 33.99
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 3.15
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 6.78
-		  },
-		  "zone": null,
-		  "package_type": "package",
-		  "delivery_days": 2,
-		  "guaranteed_service": false,
-		  "estimated_delivery_date": "2021-03-12T20:00:00Z",
-		  "carrier_delivery_days": "Friday 3/12 by 08:00 PM",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "FedEx 2Day®",
-		  "service_code": "fedex_2day",
-		  "trackable": true,
-		  "carrier_code": "fedex",
-		  "carrier_nickname": "ShipEngine Test Account - FedEx",
-		  "carrier_friendly_name": "FedEx",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $100."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343297",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553570",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 52.2500
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 3.6000
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "zone": 4,
-		  "package_type": "package",
-		  "delivery_days": 2,
-		  "guaranteed_service": false,
-		  "estimated_delivery_date": "2021-03-12T00:00:00Z",
-		  "carrier_delivery_days": "1-2",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "USPS Priority Mail Express",
-		  "service_code": "usps_priority_mail_express",
-		  "trackable": true,
-		  "carrier_code": "stamps_com",
-		  "carrier_nickname": "ShipEngine Test Account - Stamps.com",
-		  "carrier_friendly_name": "Stamps.com",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $100."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343298",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553570",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 10.1300
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 3.6000
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "zone": 4,
-		  "package_type": "package",
-		  "delivery_days": 2,
-		  "guaranteed_service": false,
-		  "estimated_delivery_date": "2021-03-12T00:00:00Z",
-		  "carrier_delivery_days": "2",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "USPS Priority Mail",
-		  "service_code": "usps_priority_mail",
-		  "trackable": true,
-		  "carrier_code": "stamps_com",
-		  "carrier_nickname": "ShipEngine Test Account - Stamps.com",
-		  "carrier_friendly_name": "Stamps.com",
-		  "validation_status": "has_warnings",
-		  "warning_messages": [
-			"The selected service includes insurance for an insured amount up to $99."
-		  ],
-		  "error_messages": []
-		},
-		{
-		  "rate_id": "se-524343299",
-		  "rate_type": "shipment",
-		  "carrier_id": "se-553570",
-		  "shipping_amount": {
-			"currency": "usd",
-			"amount": 9.7300
-		  },
-		  "insurance_amount": {
-			"currency": "usd",
-			"amount": 3.6000
-		  },
-		  "confirmation_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "other_amount": {
-			"currency": "usd",
-			"amount": 0.0
-		  },
-		  "zone": 4,
-		  "package_type": "package",
-		  "delivery_days": 5,
-		  "guaranteed_service": false,
-		  "estimated_delivery_date": "2021-03-16T00:00:00Z",
-		  "carrier_delivery_days": "5",
-		  "ship_date": "2021-03-10T00:00:00Z",
-		  "negotiated_rate": false,
-		  "service_type": "USPS Parcel Select Ground",
-		  "service_code": "usps_parcel_select",
-		  "trackable": true,
-		  "carrier_code": "stamps_com",
-		  "carrier_nickname": "ShipEngine Test Account - Stamps.com",
-		  "carrier_friendly_name": "Stamps.com",
-		  "validation_status": "valid",
-		  "warning_messages": [],
-		  "error_messages": []
-		}
-	  ],
-	  "invalid_rates": [],
-	  "rate_request_id": "se-49909659",
-	  "shipment_id": "se-88593316",
-	  "created_at": "2021-03-11T03:56:34.9860914Z",
-	  "status": "completed",
-	  "errors": []
-	},
-	"shipment_id": "se-88593316",
-	"carrier_id": null,
-	"service_code": null,
-	"external_shipment_id": null,
-	"ship_date": "2021-03-10T00:00:00Z",
-	"created_at": "2021-03-11T03:56:33.597Z",
-	"modified_at": "2021-03-11T03:56:33.597Z",
-	"shipment_status": "pending",
-	"ship_to": {
-	  "name": "SCOTT KLEMMER",
-	  "phone": "415-920-1749",
-	  "company_name": null,
-	  "address_line1": "7597 CHARMANT DR UNIT 909",
-	  "address_line2": "",
-	  "address_line3": null,
-	  "city_locality": "SAN DIEGO",
-	  "state_province": "CA",
-	  "postal_code": "92122-5005",
-	  "country_code": "US",
-	  "address_residential_indicator": "yes"
-	},
-	"ship_from": {
-	  "name": "Howard Kim",
-	  "phone": "408-654-0987",
-	  "company_name": null,
-	  "address_line1": "1671 Ben Roe Drive",
-	  "address_line2": "",
-	  "address_line3": null,
-	  "city_locality": "Los Altos",
-	  "state_province": "CA",
-	  "postal_code": "94024",
-	  "country_code": "US",
-	  "address_residential_indicator": "unknown"
-	},
-	"warehouse_id": null,
-	"return_to": {
-	  "name": "Howard Kim",
-	  "phone": "408-654-0987",
-	  "company_name": null,
-	  "address_line1": "1671 Ben Roe Drive",
-	  "address_line2": "",
-	  "address_line3": null,
-	  "city_locality": "Los Altos",
-	  "state_province": "CA",
-	  "postal_code": "94024",
-	  "country_code": "US",
-	  "address_residential_indicator": "unknown"
-	},
-	"confirmation": "none",
-	"customs": null,
-	"external_order_id": null,
-	"order_source_code": null,
-	"advanced_options": {
-	  "bill_to_account": null,
-	  "bill_to_country_code": null,
-	  "bill_to_party": null,
-	  "bill_to_postal_code": null,
-	  "contains_alcohol": false,
-	  "delivered_duty_paid": false,
-	  "non_machinable": false,
-	  "saturday_delivery": false,
-	  "dry_ice": false,
-	  "dry_ice_weight": null,
-	  "freight_class": null,
-	  "custom_field1": null,
-	  "custom_field2": null,
-	  "custom_field3": null,
-	  "collect_on_delivery": null
-	},
-	"insurance_provider": "carrier",
-	"tags": [],
-	"packages": [
-	  {
-		"package_code": "package",
-		"weight": {
-		  "value": 100.00,
-		  "unit": "ounce"
-		},
-		"dimensions": {
-		  "unit": "inch",
-		  "length": 10.00,
-		  "width": 10.00,
-		  "height": 10.00
-		},
-		"insured_value": {
-		  "currency": "usd",
-		  "amount": 200.00
-		},
-		"label_messages": {
-		  "reference1": null,
-		  "reference2": null,
-		  "reference3": null
-		},
-		"external_package_id": null
-	  }
-	],
-	"total_weight": {
-	  "value": 100.00,
-	  "unit": "ounce"
-	},
-	"items": []
+  "response": {
+    "rate_response": {
+      "rates": [
+        {
+          "rate_id": "se-525763224",
+          "rate_type": "shipment",
+          "carrier_id": "se-553570",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 52.25
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 3.6
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "zone": 4,
+          "package_type": "package",
+          "delivery_days": 2,
+          "guaranteed_service": false,
+          "estimated_delivery_date": "2021-03-13T00:00:00Z",
+          "carrier_delivery_days": "1-2",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "USPS Priority Mail Express",
+          "service_code": "usps_priority_mail_express",
+          "trackable": true,
+          "carrier_code": "stamps_com",
+          "carrier_nickname": "ShipEngine Test Account - Stamps.com",
+          "carrier_friendly_name": "Stamps.com",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $100."
+          ],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763225",
+          "rate_type": "shipment",
+          "carrier_id": "se-553570",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 10.13
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 3.6
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "zone": 4,
+          "package_type": "package",
+          "delivery_days": 2,
+          "guaranteed_service": false,
+          "estimated_delivery_date": "2021-03-13T00:00:00Z",
+          "carrier_delivery_days": "2",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "USPS Priority Mail",
+          "service_code": "usps_priority_mail",
+          "trackable": true,
+          "carrier_code": "stamps_com",
+          "carrier_nickname": "ShipEngine Test Account - Stamps.com",
+          "carrier_friendly_name": "Stamps.com",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $99."
+          ],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763226",
+          "rate_type": "shipment",
+          "carrier_id": "se-553570",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 9.73
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 3.6
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "zone": 4,
+          "package_type": "package",
+          "delivery_days": 5,
+          "guaranteed_service": false,
+          "estimated_delivery_date": "2021-03-17T00:00:00Z",
+          "carrier_delivery_days": "5",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "USPS Parcel Select Ground",
+          "service_code": "usps_parcel_select",
+          "trackable": true,
+          "carrier_code": "stamps_com",
+          "carrier_nickname": "ShipEngine Test Account - Stamps.com",
+          "carrier_friendly_name": "Stamps.com",
+          "validation_status": "valid",
+          "warning_messages": [],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763227",
+          "rate_type": "shipment",
+          "carrier_id": "se-553572",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 94.81
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 3.15
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 10.12
+          },
+          "zone": null,
+          "package_type": "package",
+          "delivery_days": 1,
+          "guaranteed_service": false,
+          "estimated_delivery_date": "2021-03-12T20:00:00Z",
+          "carrier_delivery_days": "Tomorrow by 08:00 PM",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "FedEx Standard Overnight®",
+          "service_code": "fedex_standard_overnight",
+          "trackable": true,
+          "carrier_code": "fedex",
+          "carrier_nickname": "ShipEngine Test Account - FedEx",
+          "carrier_friendly_name": "FedEx",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $100."
+          ],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763228",
+          "rate_type": "shipment",
+          "carrier_id": "se-553572",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 29.01
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 3.15
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 6.5
+          },
+          "zone": null,
+          "package_type": "package",
+          "delivery_days": 5,
+          "guaranteed_service": false,
+          "estimated_delivery_date": "2021-03-16T20:00:00Z",
+          "carrier_delivery_days": "Tuesday 3/16 by 08:00 PM",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "FedEx Express Saver®",
+          "service_code": "fedex_express_saver",
+          "trackable": true,
+          "carrier_code": "fedex",
+          "carrier_nickname": "ShipEngine Test Account - FedEx",
+          "carrier_friendly_name": "FedEx",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $100."
+          ],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763229",
+          "rate_type": "shipment",
+          "carrier_id": "se-553572",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 33.99
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 3.15
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 6.78
+          },
+          "zone": null,
+          "package_type": "package",
+          "delivery_days": 4,
+          "guaranteed_service": false,
+          "estimated_delivery_date": "2021-03-15T20:00:00Z",
+          "carrier_delivery_days": "Monday 3/15 by 08:00 PM",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "FedEx 2Day®",
+          "service_code": "fedex_2day",
+          "trackable": true,
+          "carrier_code": "fedex",
+          "carrier_nickname": "ShipEngine Test Account - FedEx",
+          "carrier_friendly_name": "FedEx",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $100."
+          ],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763230",
+          "rate_type": "shipment",
+          "carrier_id": "se-553571",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 19.49
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 3.45
+          },
+          "zone": null,
+          "package_type": "package",
+          "delivery_days": 2,
+          "guaranteed_service": true,
+          "estimated_delivery_date": "2021-03-13T23:00:00Z",
+          "carrier_delivery_days": "Saturday 3/13 by 11:00 PM",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "UPS® Ground",
+          "service_code": "ups_ground",
+          "trackable": true,
+          "carrier_code": "ups",
+          "carrier_nickname": "ShipEngine Test Account - UPS",
+          "carrier_friendly_name": "UPS",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $100."
+          ],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763231",
+          "rate_type": "shipment",
+          "carrier_id": "se-553571",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 33.96
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 3.45
+          },
+          "zone": null,
+          "package_type": "package",
+          "delivery_days": 3,
+          "guaranteed_service": true,
+          "estimated_delivery_date": "2021-03-16T23:00:00Z",
+          "carrier_delivery_days": "Tuesday 3/16 by 11:00 PM",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "UPS 3 Day Select®",
+          "service_code": "ups_3_day_select",
+          "trackable": true,
+          "carrier_code": "ups",
+          "carrier_nickname": "ShipEngine Test Account - UPS",
+          "carrier_friendly_name": "UPS",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $100."
+          ],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763232",
+          "rate_type": "shipment",
+          "carrier_id": "se-553571",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 43.86
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 3.45
+          },
+          "zone": null,
+          "package_type": "package",
+          "delivery_days": 2,
+          "guaranteed_service": true,
+          "estimated_delivery_date": "2021-03-13T23:00:00Z",
+          "carrier_delivery_days": "Saturday 3/13 by 11:00 PM",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "UPS 2nd Day Air®",
+          "service_code": "ups_2nd_day_air",
+          "trackable": true,
+          "carrier_code": "ups",
+          "carrier_nickname": "ShipEngine Test Account - UPS",
+          "carrier_friendly_name": "UPS",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $100."
+          ],
+          "error_messages": []
+        },
+        {
+          "rate_id": "se-525763233",
+          "rate_type": "shipment",
+          "carrier_id": "se-553571",
+          "shipping_amount": {
+            "currency": "usd",
+            "amount": 113.89
+          },
+          "insurance_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "confirmation_amount": {
+            "currency": "usd",
+            "amount": 0.0
+          },
+          "other_amount": {
+            "currency": "usd",
+            "amount": 3.45
+          },
+          "zone": null,
+          "package_type": "package",
+          "delivery_days": 1,
+          "guaranteed_service": true,
+          "estimated_delivery_date": "2021-03-12T23:00:00Z",
+          "carrier_delivery_days": "Tomorrow by 11:00 PM",
+          "ship_date": "2021-03-11T00:00:00Z",
+          "negotiated_rate": false,
+          "service_type": "UPS Next Day Air Saver®",
+          "service_code": "ups_next_day_air_saver",
+          "trackable": true,
+          "carrier_code": "ups",
+          "carrier_nickname": "ShipEngine Test Account - UPS",
+          "carrier_friendly_name": "UPS",
+          "validation_status": "has_warnings",
+          "warning_messages": [
+            "The selected service includes insurance for an insured amount up to $100."
+          ],
+          "error_messages": []
+        }
+      ],
+      "invalid_rates": [],
+      "rate_request_id": "se-50057040",
+      "shipment_id": "se-88850879",
+      "created_at": "2021-03-11T21:47:57.3749154Z",
+      "status": "completed",
+      "errors": []
+    },
+    "shipment_id": "se-88850879",
+    "carrier_id": null,
+    "service_code": null,
+    "external_shipment_id": null,
+    "ship_date": "2021-03-11T00:00:00Z",
+    "created_at": "2021-03-11T21:47:56.347Z",
+    "modified_at": "2021-03-11T21:47:56.347Z",
+    "shipment_status": "pending",
+    "ship_to": {
+      "name": "SCOTT KLEMMER",
+      "phone": "415-920-1749",
+      "company_name": null,
+      "address_line1": "7597 CHARMANT DR UNIT 909",
+      "address_line2": "",
+      "address_line3": null,
+      "city_locality": "SAN DIEGO",
+      "state_province": "CA",
+      "postal_code": "92122-5005",
+      "country_code": "US",
+      "address_residential_indicator": "yes"
+    },
+    "ship_from": {
+      "name": "Howard Kim",
+      "phone": "408-654-0987",
+      "company_name": null,
+      "address_line1": "1671 Ben Roe Drive",
+      "address_line2": "",
+      "address_line3": null,
+      "city_locality": "Los Altos",
+      "state_province": "CA",
+      "postal_code": "94024",
+      "country_code": "US",
+      "address_residential_indicator": "unknown"
+    },
+    "warehouse_id": null,
+    "return_to": {
+      "name": "Howard Kim",
+      "phone": "408-654-0987",
+      "company_name": null,
+      "address_line1": "1671 Ben Roe Drive",
+      "address_line2": "",
+      "address_line3": null,
+      "city_locality": "Los Altos",
+      "state_province": "CA",
+      "postal_code": "94024",
+      "country_code": "US",
+      "address_residential_indicator": "unknown"
+    },
+    "confirmation": "none",
+    "customs": null,
+    "external_order_id": null,
+    "order_source_code": null,
+    "advanced_options": {
+      "bill_to_account": null,
+      "bill_to_country_code": null,
+      "bill_to_party": null,
+      "bill_to_postal_code": null,
+      "contains_alcohol": false,
+      "delivered_duty_paid": false,
+      "non_machinable": false,
+      "saturday_delivery": false,
+      "dry_ice": false,
+      "dry_ice_weight": null,
+      "freight_class": null,
+      "custom_field1": null,
+      "custom_field2": null,
+      "custom_field3": null,
+      "collect_on_delivery": null
+    },
+    "insurance_provider": "carrier",
+    "tags": [],
+    "packages": [
+      {
+        "package_code": "package",
+        "weight": {
+          "value": 100.0,
+          "unit": "ounce"
+        },
+        "dimensions": {
+          "unit": "inch",
+          "length": 10.0,
+          "width": 10.0,
+          "height": 10.0
+        },
+        "insured_value": {
+          "currency": "usd",
+          "amount": 200.0
+        },
+        "label_messages": {
+          "reference1": null,
+          "reference2": null,
+          "reference3": null
+        },
+        "external_package_id": null
+      }
+    ],
+    "total_weight": {
+      "value": 100.0,
+      "unit": "ounce"
+    },
+    "items": []
   }
+}

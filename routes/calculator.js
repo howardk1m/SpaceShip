@@ -1,8 +1,13 @@
+var data = require("../data.json");
+
+// load page
 exports.view = function (req, res) {
   res.render('calculator');
 };
 
+// REST API call to fetch shipping rates
 exports.calculate = function (req, res) {
+
   // dependency package for fetch Web API call
   const fetch = require('node-fetch');
 
@@ -73,12 +78,13 @@ exports.calculate = function (req, res) {
     redirect: 'follow',
   };
 
+  // fetch data via API call to ShipEngine REST API
   fetch("https://api.shipengine.com/v1/rates", requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      console.log(result);
+      // console.log(result);
+      data.response = JSON.parse(result);
       res.json(result);
     })
-    // .then(result => res.json(result))
     .catch(error => console.log('error', error));
 }

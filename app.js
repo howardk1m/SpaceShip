@@ -18,7 +18,7 @@ var methodOverride = require('method-override');
  */
 var index = require('./routes/index');
 var calculator = require('./routes/calculator');
-var results = require('./routes/results');
+var rates = require('./routes/rates');
 var mypackages = require('./routes/mypackages');
 
 
@@ -35,11 +35,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride());
 app.use(cookieParser('IxD secret key'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 // express session deprecated 
 // app.use(expressSession());
-// router depreciated in express 4
+
+// router deprecated in express 4
 // app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
@@ -52,8 +54,8 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 // app.get('/login', index.loginInfo);
 app.get('/calculator', calculator.view);
-app.post('/calculate', results.calculate);
-app.get('/results', results.rates);
+app.post('/calculate', calculator.calculate);
+app.get('/rates', rates.view);
 app.get('/mypackages', mypackages.view);
 app.post('/addpackage', mypackages.add);
 
