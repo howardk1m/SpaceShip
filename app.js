@@ -51,13 +51,16 @@ if ('development' == app.get('env')) {
 /**
  * express routes
  */
+// page render routes
 app.get('/', index.view);
-// app.get('/login', index.loginInfo);
 app.get('/calculator', calculator.view);
-app.post('/calculate', calculator.calculate);
 app.get('/rates', rates.view);
-app.get('/data', rates.data);
 app.get('/mypackages', mypackages.view);
+// get data routes
+app.get('/data', rates.data);
+// post data routes
+app.post('/calculate', calculator.calculate);
+app.post('/rateById', calculator.rateById);
 app.post('/addpackages', mypackages.fill);
 
 http.createServer(app).listen(app.get('port'), function(){

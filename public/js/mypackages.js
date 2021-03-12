@@ -52,7 +52,19 @@ function removePackage(e) {
     }
 }
 
-function getRates(e) {
+function getRates() {
     var shipment_id = $(this).closest('.package').attr('id');
-    
+    const id = JSON.stringify({ "shipment_id": shipment_id });
+
+    $.post('rateById', { id: id }, postCallBack);
+    function postCallBack(res) {
+        var resJSON = JSON.parse(res);
+        if (resJSON.rate_response) {
+            window.location.href = "/rates";
+        } else {
+            if (resJSON.errors){
+                alert(resJSON.errors[0].message);
+            }
+        }
+    }
 }

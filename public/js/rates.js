@@ -7,8 +7,8 @@ function initializePage() {
 }
 
 function addPackage() {
-    // get data from server
-    $.get('data', function(res) {
+    // get API response data from server
+    $.get('data', function (res) {
         // build package JSON object
         const data = res.response;
         const origin = buildOrigin(data.ship_from);
@@ -28,14 +28,22 @@ function addPackage() {
         // parse user's myPackages into JSON object array
         var userPackagesJSON = JSON.parse(userPackages);
 
-        // push the new package JSON object into array
-        userPackagesJSON.packages.push(newPackage);
-        // convert package array to string
-        userPackages = JSON.stringify(userPackagesJSON);
-        // store it back to user's local storage as 'myPackages'
-        localStorage.setItem('myPackages', userPackages);
-        // post the new packages array into server-side json file
-        $.post('addPackages', { packages: userPackages }, postCallBack);
+        // check if shipment already exists in user's myPackages
+        var exists = userPackagesJSON.packages.filter(x => x.shipment_id === shipment_id);
+
+        if (exists.length !== 0) {
+            console.log(exists);
+            alert("Package already exists in your Package List");
+        } else {
+            // push the new package JSON object into array
+            userPackagesJSON.packages.push(newPackage);
+            // convert package array to string
+            userPackages = JSON.stringify(userPackagesJSON);
+            // store it back to user's local storage as 'myPackages'
+            localStorage.setItem('myPackages', userPackages);
+            // post the new packages array into server-side json file
+            $.post('addPackages', { packages: userPackages }, postCallBack);
+        }
 
         function postCallBack(res) {
             console.log(res);
