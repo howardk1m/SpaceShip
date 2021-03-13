@@ -1,242 +1,150 @@
-/*hamburger drop down*/
+html {
+    min-height: 100%;
+    font-family: 'Orbitron', serif;
+}
+
 body {
-    font-family: Lao;
-    background-color: gray;
-}
 
-/* header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-}
-
-.headerbar {
+    background-image: linear-gradient(180.00000327387772deg, #16202b 0%, 
+        rgba(23,53,80,1) 28.64583432674408%, 
+        rgba(32,60,130,0.8500000238418579) 41.66666567325592%, 
+        rgba(79,108,201,1) 51.04166865348816%, 
+        rgba(100,98,205,0.832914412021637) 69.79166865348816%, 
+        rgba(35,55,163,0.6653777956962585) 93.22916865348816%, 
+        rgba(79,96,247,0.7900000214576721) 98.4375%);
+    justify-content: center;
+    font-family: 'Orbitron', serif;
+    color: white;
     height: 100%;
-    z-index: 100;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: white;
-    padding: 0 5vw;
+    /*overflow: hidden;
+   /* position: relative;
+    height: 100%;*/
+
+   /* text-shadow: 5px 5px 4px #16202b;
+    font-weight: 700;
+    font-style: normal;
+    font-family: "Orbitron", serif;
+    color: #fff8f8;
+    font-size: 36px;
+    letter-spacing: 6.4799999999999995px;
+    line-height: 1.2;
+    text-align: left; */
 }
 
-.logo {
-    display: flex;
+.landing-page {
+    margin-top: 50;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Orbitron', serif;
+    color: white;
     align-items: center;
-    justify-self: start;
-}
-
-.logo span {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: black;
-}
-
-.menuBtn {
     display: flex;
-    align-items: center;
-    justify-self: end;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.menu {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    top: 70px;
-    left: 0;
-    height: calc(100vh - 70px);
-    background: #fff;
-    transform: translateY(-100%);
-    transition: transform .25s ease;
-}
-
-.visible {
-    transform: none;
-}
-
-.menu div {
+.flex-col {
     display: flex;
     flex-direction: column;
 }
-
-.menu a {
-    all: unset;
-    width: 100%;
-    height: 12vh;
+.title{
+    /*width: 413px;
+    height: 54px;*/
+/*    width: 20rem;
+    height: 20rem;*/
+    /*overflow: visible;*/
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 5px 5px 4px #16202b;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Orbitron", serif;
+    color: #fff8f8;
+    font-size: 3.6rem;
+    letter-spacing: 6.4799999999999995px;
+    align-items: center;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*line-height: 1.2;*/
+    /*text-align: center;*/
+}
+
+/*.rocket {
+    margin-top: 150;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    transform: rotate(45deg);
+    text-shadow: 5px 5px 4px #16202b;*/
+/*}*/
+
+
+.btn {
+    font-weight: 700;
+    height: 40px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /*cursor: default;*/
+}
+
+.rocket {
+    width: 40%;
+    height: 50%;
+    transform: rotate(45deg);
+    /*overflow: visible;*/
+    /*text-shadow: 5px 5px 4px #16202b;*/
+    /*font-weight: 700;*/
+    /*font-style: normal;*/
+    /*font-family: "Orbitron", serif;*/
+    /*color: #fff8f8;*/
+    /*font-size: 36px;*/
+    /*letter-spacing: 6.4799999999999995px;*/
+    /*line-height: 1.2;*/
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.menu span {
-    font-size: 2rem;
-    font-weight: 700;
-    cursor: pointer;
-} */
-
-/*added login screen*/
-body, html {
-    height: 100%;
-    background-repeat: no-repeat;
-    /*background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
-    /*color gradient*/
-    /*background: linear-gradient(rgba(2,0,36,1) 0%, rgba(65,65,107,1) 45%, rgba(66,92,133,1) 100%);*/
-
-    /*gray gradient */
-    background: linear-gradient(rgba(80,80,82,1) 0%, rgba(110,108,108,1) 75%, rgba(147,145,145,1) 98%);
-    /*background-image: #808080;*/
-    background-color: #808080;
+.slogan{
+    color:white;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.card-container.card {
-    max-width: 350px;
-    padding: 40px 40px;
-}
-
-.btn {
-    font-weight: 700;
-    height: 36px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: default;
-}
-
-/*
- * Card component
- */
-.card {
-    background-color: #F7F7F7;
-    /* just in case there no content*/
-    padding: 20px 25px 30px;
-    margin: 0 auto 25px;
-    margin-top: 50px;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-.profile-img-card {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 10px;
-    display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-.checkbox {
+/*.checkbox {
     position: inherit !important;
 }
 
 .checkbox input {
     position: inherit !important;
-}
+}*/
 
-/*
- * Form styles
- */
-.profile-name-card {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px 0 0;
-    min-height: 1em;
+.fb-root {
+    margin-top: -30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.reauth-email {
-    display: block;
-    color: #404040;
-    line-height: 2;
-    margin-bottom: 10px;
-    font-size: 14px;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.form-signin #inputEmail,
-.form-signin #inputPassword {
-    direction: ltr;
-    height: 44px;
-    font-size: 16px;
-}
-
-.form-signin input[type=email],
-.form-signin input[type=password],
-.form-signin input[type=text],
-.form-signin button {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    z-index: 1;
-    /*position: relative;*/
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.form-signin .form-control:focus {
-    border-color: rgb(104, 145, 162);
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
-}
-
-.btn.btn-signin {
-    /*background-color: #4d90fe; */
-    /*background-color: rgb(104, 145, 162);*/
-        /*background-color: #808080; */
-    background-color: #327cad; 
-    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
-    padding: 0px;
-    font-weight: 700;
-    font-size: 14px;
-    height: 36px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    border: none;
-    -o-transition: all 0.218s;
-    -moz-transition: all 0.218s;
-    -webkit-transition: all 0.218s;
-    transition: all 0.218s;
-}
-
-.btn.btn-signin:hover,
-.btn.btn-signin:active,
-.btn.btn-signin:focus {
-    /*background-color: rgb(12, 97, 33);*/
-    /*background-color: #327cad; */
-    background-color: #055ebb;
-}
-
-.forgot-password {
-    color: rgb(104, 145, 162);
-}
-
-.forgot-password:hover,
-.forgot-password:active,
-.forgot-password:focus{
-    color: rgb(12, 97, 33);
-}
-
 .Login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*height: 1100px;*/
+    /*width: 250px;
+    height: 36px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #0c205f;
+    overflow: hidden;
+    border-radius: 5px;*/
 }
 
 .hr {

@@ -1,6 +1,6 @@
 body {
-    background-color: #242526;
-    font-family: 'Open Sans', sans-serif;
+    background-color: #172635;
+    font-family: 'Arial', sans-serif;
     font-size: 1.5rem;
 }
 
@@ -11,6 +11,13 @@ header {
     left: 0;
     width: 100%;
     height: 70px;
+    font-size:14px
+    letter-spacing: 2.1px;
+    line-height:1.2;
+    text-align:left;
+    font-family: 'Orbitron', serif;
+    font-style: normal;
+    background: #738BD8;
 }
 
 
@@ -21,13 +28,21 @@ header {
 
  */
 .headerbar {
+   /*position:absolute;*/
     height: 100%;
-    z-index: 100;
+    /*z-index: 100;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: #2F3136;
     padding: 0 4vw;
+    font-size:14px
+    letter-spacing: 2.1px;
+    line-height:1.2;
+    text-align:left;
+    font-family: 'Orbitron', serif;
+    font-style: normal;
+    background: #738BD8;
 }
 
 .logo {
@@ -40,17 +55,18 @@ header {
 /* 'spaceship' logo in header */
 .logo span {
     /*font-family; 'Open Sans', sans-serif;*/
-    font-size: 2rem;
+    font-size: 14px;
     font-weight: 800;
-    color: #E4E6EB;
+    color: white;
     /*background: ;*/
 }
 
 .menuBtn {
+    font-size: 14px;
     display: flex;
     align-items: center;
-    justify-self: end;
-    /*color: white;*/
+    /*justify-self: end;*/
+    color: white;
 }
 
 /* menu once dropped down from hamburger */ 
@@ -59,11 +75,18 @@ header {
     z-index: -1;
     width: 100%;
     top: 70px;
+    font-style: normal;
     left: 0;
     height: calc(100vh - 70px);
-    background: #2F3136;
+    /*background: #2F3136;*/
     transform: translateY(-100%);
     transition: transform .25s ease;
+    background: #738BD8;
+    font-weight: 800;
+    letter-spacing: 3.2399999999999998px;
+    font-size: 18px;
+    line-height: 1.2;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
 }
 
 .visible {
@@ -86,21 +109,32 @@ header {
 }
 
 .menu span {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 500;
     cursor: pointer;
     color: #E4E6EB;
 }
 
 
-/* background of the mypackages page */
+/* text of the mypackages page */
 .mypackages {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #242526;
+    background: #172635;
+    font-family: 'Arial', serif;
     color: #E4E6EB;
+}
+
+/*formatting of 'My Packages' header*/
+h3, .h3 {
+    text-shadow: 0px 4px 4px #000000, 0px 4px 4px rgba(0,0,0,1), 0px 4px 4px rgba(0,0,0,1);
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Orbitron", serif;
+    /*color: white;*/
+    font-size: 23px;
 }
 
 .package {
@@ -109,7 +143,8 @@ header {
     width: 90%;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #6B717C;
+    background-color: #405088;
+    color: white;
     border-radius: 8px 8px 8px 8px;
     margin-bottom: 2rem;
 }

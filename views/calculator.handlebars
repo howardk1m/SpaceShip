@@ -3,12 +3,13 @@
 <head>
 	<title>Calculator | SpaceShip</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-	<style>
-		body {
-			font-family: 'Open Sans', 'Helvetica', sans-serif;
-		}
-	</style>
+
+
+<!-- for the "calculate rates button" -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,80 +18,159 @@
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/calculator.css" rel="stylesheet">
 	<script src="/js/calculator.js"></script>
+
+
 </head>
 
 <body>
 	{{> navbar}}
 	<div class="calculator">
 		<h3>
-			<SPAN STYLE="font-size: 25pt">Shipping Calculator</SPAN>
+			<SPAN>SHIPPING CALCULATOR</SPAN>
 		</h3>
+
+
+
 		<form id="packageForm">
 			<h4>Origin</h4>
-			<input id="fromaddress1" type="text" placeholder="Street Address*" required>
-			</style>
-			<input id="fromaddress2" type="text" placeholder="Apartment/Suite/Other">
-			<div class="secondLine">
-				<input type="text" placeholder="City*" style="width: 50%" required id="fromCity" name="fromCity">
-				<input type="text" placeholder="State*" maxlength="2" style="width: 15%"
-					oninput="this.value = this.value.toUpperCase()" required id="fromState" name="fromState">
-				<input type="number" placeholder="Zipcode*" style="width: 35%" minlength="5" maxlength="5" required
-					id="fromZip" name="fromZip">
+			<h6>  Fill in the sender's address. <br> <br> * indicates required fields</h6>
+			<div class="form__group field">
+				<div class="form_parts">
+					<input type="input" class="form__field" placeholder="Street Address" name="Street Address" id='Street Address' oninput="this.value = this.value.toUpperCase()"required />
+					<label for="Street Address" class="form__label">Street Address*</label>
+				</div>
 			</div>
+
+			<div class="form__group field">
+				<div class="form_parts">
+					<input type="input" class="form__field" placeholder="Apartment/Suite/Other" name="Apartment/Suite/Other"  oninput="this.value = this.value.toUpperCase()" id='Apartment/Suite/Other'  />
+					<label for="Apartment/Suite/Other" class="form__label">Apartment/Suite/Other</label>
+				</div>
+			</div>
+
+
+
+			<div class="form__group field">
+				<div class="form_parts oneline">
+					<div class="city">
+						<input type="input" class="form__field" placeholder="City" name="City" id='City' oninput="this.value = this.value.toUpperCase()" required />
+						<label for="City" class="form__label">City*</label>
+					</div>
+				<!-- </div> -->
+					<div class="state">
+						<input type="input" class="form__field" placeholder="State" name="State" id='State' oninput="this.value = this.value.toUpperCase()" required />
+						<label for="State" class="form__label">State*</label>
+					</div>
+					<div class="zip">
+						<input type="text" class="form__field" placeholder="Zipcode" min="0" pattern="\d*" name="Zipcode" id='Zipcode' minlength="5" maxlength="5" required />
+						<label for="Zipcode" class="form__label">Zipcode*</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="form__group field oneline">
+				
+			</div>
+
+			<div class="form__group field oneline">
+				
+			</div>
+
+
 
 			<h4>Destination</h4>
-			<input id="toaddress1" type="text" placeholder="Street Address*" required>
-			<input id="toaddress2" type="text" placeholder="Apartment/Suite/Other">
-			<div class="secondLine">
-				<input type="text" placeholder="City*" style="width: 90%" required id="toCity" name="toCity">
-				<input type="text" placeholder="State*" maxlength="2" style="width: 90%"
-					oninput="this.value = this.value.toUpperCase()" required id="toState" name="toState">
-				<input type="number" placeholder="Zipcode*" style="width: 100%" minlength="5" maxlength="5" required
-					id="toZip" name="toZip">
+			<h6> Fill in the receiver's address. </h6>
+			<div class="form__group field">
+				<div class="form_parts">
+					<input type="input" class="form__field" placeholder="Street Address" name="Street Address" id='Street Address' oninput="this.value = this.value.toUpperCase()"required />
+					<label for="Street Address" class="form__label">Street Address*</label>
+				</div>
 			</div>
 
+			<div class="form__group field">
+				<div class="form_parts">
+					<input type="input" class="form__field" placeholder="Apartment/Suite/Other" name="Apartment/Suite/Other"  oninput="this.value = this.value.toUpperCase()" id='Apartment/Suite/Other' />
+					<label for="Apartment/Suite/Other" class="form__label">Apartment/Suite/Other</label>
+				</div>
+			</div>
+
+
+
+			<div class="form__group field">
+				<div class="form_parts oneline">
+					<div class="city">
+						<input type="input" class="form__field" placeholder="City" name="City" id='City' oninput="this.value = this.value.toUpperCase()" required />
+						<label for="City" class="form__label">City*</label>
+					</div>
+				<!-- </div> -->
+					<div class="state">
+						<input type="input" class="form__field" placeholder="State" name="State" id='State' oninput="this.value = this.value.toUpperCase()" required />
+						<label for="State" class="form__label">State*</label>
+					</div>
+					<div class="zip">
+						<input type="text" class="form__field" placeholder="Zipcode" min="0" pattern="\d*" name="Zipcode" id='Zipcode' minlength="5" maxlength="5" required />
+						<label for="Zipcode" class="form__label">Zipcode*</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="form__group field oneline">
+				
+			</div>
+
+			<div class="form__group field oneline">
+				
+			</div>
+
+
+
+<!-- Add star banner to differentiate addresses and package dimensions -->
+			<span class="stars" style= "color:#738BD8"> ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆</span>
 			<h4>Package Dimensions</h4>
-			<div class="dimension">
-				<input id="length" type="number" placeholder="Length*" style="width: 60%" required>
-				<select id="lengthD" style="width: 30%">
-					<option>Inches</option>
-					<option>Millimeters</option>
-				</select>
+			<h6> Fill in shipping dimensions (measured in inches). </h6>
+			<div class="form__group field">
+				<div class="form_parts oneline">
+					<div class="length">
+						<input type="number" class="form__field" placeholder="Length*" name="Length" id='Length' min="1" max="100" oninput="this.value = this.value.toUpperCase()" required />
+						<label for="Length" class="form__label">Length*</label>
+					</div>
+				<!-- </div> -->
+					<div class="width">
+						<input type="number" class="form__field" placeholder="Width*" name="width" id='width' min="1" max="100" oninput="this.value = this.value.toUpperCase()" required />
+						<label for="width" class="form__label">Width*</label>
+					</div>
+					<div class="height">
+						<input type="number" class="form__field" placeholder="height" name="height" id='height' max="100" oninput="this.value = this.value.toUpperCase()" required />
+						<label for="height" class="form__label">Height*</label>
+					</div>
+				</div>
 			</div>
-			<div class="dimension">
-				<input id="width" type="number" placeholder="Width*" style="width: 60%" required>
-				<select id="widthD" style="width: 30%">
-					<option>Inches</option>
-					<option>Millimeters</option>
-				</select>
-			</div>
-			<div class="dimension">
-				<input id="height" type="number" placeholder="Height*" style="width: 60%" required>
-				<select id="heightD" style="width: 30%">
-					<option>Inches</option>
-					<option>Millimeters</option>
-				</select>
-			</div>
+
+
 
 			<h4>Package Weight</h4>
-			<div class="dimension">
-				<input id="weight" type="number" placeholder="Weight*" style="width: 60%" required>
-				<select id="weightD" style="width: 30%">
-					<option>Pounds</option>
-					<option>Kilograms</option>
-				</select>
+			<style>
+
+			</style>
+			<h6> Weight measured in ounces. </h6>
+			<div class="form__group field">
+				<div class="form_parts oneline">
+					<div class="weight">
+						<input type="number" class="form__field" placeholder="Weight*" name="Weight" id='Weight' max="150" oninput="this.value = this.value.toUpperCase()" required />
+						<label for="Weight" class="form__label">Weight*</label>
+					</div>
+				</div>
 			</div>
 
-			<h4>Options</h4>
+
+
+			<h4 class="options">Options</h4>
+			<h6> Insurance coverage protects against loss or damage and depends on item's declared value. Disclaimer: We are not liable for any lost or damaged package. </h6>
 
 			<div class="checkboxes">
-				<label>
-					<input type="checkbox" id="check1">
-					Signature Confirmation
-				</label>
 				
 				<label>
-					<input type="checkbox" class="insCheck">
+					<input type="checkbox" class="insCheck" style="font-weight: 900"> 
 					Package Insurance
 				</label>
 				<div class="insValue">
@@ -109,14 +189,9 @@
 				</script>
 			</div>
 
-			<div id="wrapper">
-				<button id="addBtn" class="btn btnd-lg btn-primary" type="submit" style="width: 45%">
-					Add Package
-				</button>
-				<button id="calcBtn" class="btn btnd-lg btn-primary ml-3" type="submit" style="width: 50%" {{!--formaction="/results" --}}>
-					Calculate Rates
-				</button>
-			</div>
+				<div class="container">
+					<a href="/rates" class="btn">Calculate Rates</a>
+				</div>
 		</form>
 	</div>
 

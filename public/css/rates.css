@@ -1,15 +1,23 @@
 body {
-    background-color: gray;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.4rem;
+    background-color: #172635;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
 }
 
 header {
+    /*font-family: 'Open Sans', sans-serif;*/
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     height: 70px;
+    font-size:14px
+    letter-spacing: 2.1px;
+    line-height:1.2;
+    text-align:left;
+    font-family: 'Orbitron', serif;
+    font-style: normal;
+    background: #738BD8;
 }
 
 
@@ -20,32 +28,44 @@ header {
  */
 
 .headerbar {
+   /*position:absolute;*/
     height: 100%;
-    z-index: 100;
+    /*z-index: 100;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: #2F3136;
     padding: 0 4vw;
+    font-size:14px
+    letter-spacing: 2.1px;
+    line-height:1.2;
+    text-align:left;
+    font-family: 'Orbitron', serif;
+    font-style: normal;
+    background: #738BD8;
 }
 
 .logo {
     display: flex;
     align-items: center;
     justify-self: start;
-    color: white;
+    color: white; 
 }
 
 .logo span {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #E4E6EB;
+    /*font-family; 'Open Sans', sans-serif;*/
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    /*background: ;*/
 }
 
 .menuBtn {
+    font-size: 14px;
     display: flex;
     align-items: center;
-    justify-self: end;
+    /*justify-self: end;*/
+    color: white;
 }
 
 .menu {
@@ -53,11 +73,18 @@ header {
     z-index: -1;
     width: 100%;
     top: 70px;
+    font-style: normal;
     left: 0;
     height: calc(100vh - 70px);
-    background: #2F3136;
+    /*background: #2F3136;*/
     transform: translateY(-100%);
     transition: transform .25s ease;
+    background: #738BD8;
+    font-weight: 800;
+    letter-spacing: 3.2399999999999998px;
+    font-size: 18px;
+    line-height: 1.2;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
 }
 
 .visible {
@@ -79,10 +106,22 @@ header {
 }
 
 .menu span {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
     color: #E4E6EB;
 }
+
+/*styling for the 'Shipping Options title'*/
+h3, .h3 {
+    text-shadow: 0px 4px 4px #000000, 0px 4px 4px rgba(0,0,0,1), 0px 4px 4px rgba(0,0,0,1);
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Orbitron", serif;
+    /*color: white;*/
+    font-size: 23px;
+}
+
 
 /* background of the results page */
 .results {
@@ -90,8 +129,68 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #242526;
+    background: #172635;
+    font-family: 'Arial', serif;
     color: #E4E6EB;
+}
+
+
+/*arrow to return back to calculator*/
+.arrow {
+    cursor: pointer;
+    height: 30px;
+    /*left: 50%;*/
+    /*position: absolute;*/
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform 0.1s;
+    width: 80px;
+    margin-left: -40;
+}
+.arrow-top, .arrow-bottom {
+    background-color: #9294f8;
+    height: 4px;
+    /*left: -5px;*/
+    /*position: absolute;*/
+    top: 50%;
+    width: 25%;
+}
+.arrow-top:after, .arrow-bottom:after {
+    /*background-color: white;*/
+    content: '';
+    height: 100%;
+    /*position: absolute;*/
+    top: 0;
+    transition: all 0.15s;
+}
+.arrow-top {
+    transform: rotate(135deg);
+    transform-origin: bottom right;
+}
+.arrow-bottom {
+    transform: rotate(-135deg);
+    transform-origin: top right;
+}
+.arrow-top:after {
+    left: 100%;
+    right: 0;
+    transition-delay: 0s;
+}
+.arrow-bottom:after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0.15s;
+}
+.arrow:hover .arrow-top:after {
+    left: 0;
+    transition-delay: 0.15s;
+}
+.arrow:hover .arrow-bottom:after {
+    right: 0;
+    transition-delay: 0s;
+}
+.arrow:active {
+    transform: translateX(-50%) translateY(-50%) scale(0.9);
 }
 
 .details {
@@ -105,10 +204,61 @@ header {
     margin: 2rem 0;
 }
 
+/*calculate new package button*/
+.container {
+    margin-top: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /*color:white;*/
+     /*height: 100vh;*/
+}
+a {
+     font-size: 1.5rem;
+     padding: 1rem 3rem;
+     color: white;*/
+     /*text-transform: uppercase;*/
+}
+.btn {
+     font-size: 12px;
+     text-decoration: none;
+     border: 1px solid #9294f8;
+     /*position: relative;*/
+    overflow: hidden;
+}
+.btn:hover {
+    color: #738BD8;
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+ .btn:before {
+     content: "";
+     /*position: inherit;*/
+     position:absolute;
+     top: 0;
+     left: -50%;
+     /*width: 100%;*/
+     /*height: 50%;*/
+     /*justify-content: center;*/
+     background: linear-gradient(120deg, transparent, rgba(146, 148, 248, 0.4), transparent);
+     transition: all 650ms ;
+}
+ .btn:hover:before {
+     left: 40%;
+}
+
+/*card for shipment details*/
+.details {
+    background: #405088;
+    color: white;
+    /*font-family: 'Orbitron', serif;*/
+}
+
+/*text other than title for shipment details card*/
 .detail-location {
     display: flex;
     flex-direction: row;
     color: #C9C9C9;
+    font-family: 'Arial', serif;
 }
 
 .options {
@@ -117,7 +267,7 @@ header {
     width: 90%;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #6B717C;
+    background-color: #7F8BB5;
     border-radius: 8px 8px 8px 8px;
     margin-bottom: 2rem;
 }
