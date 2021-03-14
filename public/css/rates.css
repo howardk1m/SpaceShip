@@ -306,3 +306,7 @@ button {
     justify-content: space-between;
     margin-bottom: 2rem;
 }
+
+.ui-loader {
+    display: none !important;
+ }
