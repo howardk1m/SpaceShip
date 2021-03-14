@@ -271,7 +271,6 @@ button {
 }
 
 .img {
-    height: 100%;
     width: 40%;
     display: flex;
     justify-content: center;
@@ -279,6 +278,7 @@ button {
 }
 
 .carrierimg {
+    all: unset;
     max-width: 100px;
     max-height: 70px;
 }

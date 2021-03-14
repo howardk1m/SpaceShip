@@ -23,12 +23,6 @@ function addPackage() {
             "shipment_id": shipment_id
         };
 
-        // // get user's myPackages from user's local storage
-        // var userPackages = localStorage.myPackages;
-        // console.log(userPackages);
-        // // parse user's myPackages into JSON object array
-        // var userPackagesJSON = JSON.parse(userPackages);
-        
         // get user packages from user's local storage
         var userPackages = localStorage.myPackages;
         // if user has package array
