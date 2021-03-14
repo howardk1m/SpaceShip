@@ -23,10 +23,22 @@ function addPackage() {
             "shipment_id": shipment_id
         };
 
-        // get user's myPackages from user's local storage
+        // // get user's myPackages from user's local storage
+        // var userPackages = localStorage.myPackages;
+        // console.log(userPackages);
+        // // parse user's myPackages into JSON object array
+        // var userPackagesJSON = JSON.parse(userPackages);
+        
+        // get user packages from user's local storage
         var userPackages = localStorage.myPackages;
-        // parse user's myPackages into JSON object array
-        var userPackagesJSON = JSON.parse(userPackages);
+        // if user has package array
+        if (userPackages != null) {
+            // parse the array into JSON
+            var userPackagesJSON = JSON.parse(userPackages);
+        } else { // else if package array DNE
+            // create a new JSON array
+            var userPackagesJSON = { "packages": [] };
+        }
 
         // check if shipment already exists in user's myPackages
         var exists = userPackagesJSON.packages.filter(x => x.shipment_id === shipment_id);
