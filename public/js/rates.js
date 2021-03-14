@@ -3,7 +3,7 @@ $(document).ready(function () {
 })
 
 function initializePage() {
-    $('#addPackage').click(addPackage);
+    // $('#addPackage').click(addPackage);
 }
 
 function addPackage() {
