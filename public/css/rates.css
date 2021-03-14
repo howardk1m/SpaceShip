@@ -143,9 +143,11 @@ h3, .h3 {
     transition: transform 0.1s;
     width: 80px;
     margin-left: -40;
+    z-index: -100;
 }
 .arrow-top, .arrow-bottom {
-    background-color: #9294f8;
+    /* background-color: #9294f8; */
+    background-color: #738BD8;
     height: 4px;
     /*left: -5px;*/
     /*position: absolute;*/
