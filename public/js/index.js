@@ -14,11 +14,11 @@ function initializePage() {
 }
 
 function saveUser(response) {
-    $("#profile-img").attr("src", response.picture.data.url)
-    $("#profile-name").text(response.name);
+    // $("#profile-img").attr("src", response.picture.data.url)
+    $("#greeting").text("Hello " + response.first_name + "!");
     localStorage.setItem("loginState", true);
-    localStorage.setItem("userPic", response.picture.data.url);
-    localStorage.setItem("userName", response.name);
+    // localStorage.setItem("userPic", response.picture.data.url);
+    localStorage.setItem("userName", response.first_name);
 }
 
 function authUser() {
@@ -60,13 +60,13 @@ function changeUser() {
     $("hr").show();
     getNav();
     $("nav").show();
-    $("#profile-img").attr("src", localStorage.userPic)
-    $("#profile-name").text(localStorage.userName);
+    // $("#profile-img").attr("src", localStorage.userPic)
+    $("#greeting").text("Hello " + localStorage.userName + "!");
 }
 
 function logout() {
     localStorage.removeItem("loginState");
-    localStorage.removeItem("userPic");
+    // localStorage.removeItem("userPic");
     localStorage.removeItem("userName");
     FB.logout(function (response) {
         console.log('Facebook login status changed.');
@@ -74,8 +74,8 @@ function logout() {
     $(".Login").show();
     $("hr").hide();
     $("nav").hide();
-    $("#profile-img").attr("src", "//ssl.gstatic.com/accounts/ui/avatar_2x.png")
-    $("#profile-name").text("");
+    // $("#profile-img").attr("src", "//ssl.gstatic.com/accounts/ui/avatar_2x.png")
+    $("#greeting").text("");
 }
 
 function getNav() {

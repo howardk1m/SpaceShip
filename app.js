@@ -5,6 +5,7 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
+var favicon = require('serve-favicon')
 var exphbs = require('express-handlebars')
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
@@ -28,7 +29,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout: false}));
 app.set('view engine', 'handlebars');
-// app.use(express.favicon());
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 // terminal logger currently disabled
 // app.use(morgan('combined'));
 app.use(bodyParser.json());

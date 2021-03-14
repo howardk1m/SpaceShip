@@ -4,6 +4,10 @@
     <title>Rates | SpaceShip</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- use Open Sans as main font. import from google  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
@@ -28,7 +32,7 @@
             </div>
         </h3>
 
-      
+
 
 
         <div class="details">
@@ -47,13 +51,13 @@
 
         <div class="buttonRow">
             <div class="add_container">
-                <a href="#" class="btn">Add to MyPackages</a>
+                <button id="addPackage" class="btn">Add to MyPackages</button>
             </div>
             <div class="new_container">
-                <a href="/calculator" class="btn">New Package</a>
+                <button onclick="window.location.href = '/calculator'" class="btn">New Package</button>
             </div>
             <!-- <button class="btn btnd-lg btn-primary rateBtn" onclick="history.back()" type="button">Previous</button> -->
-           <!--  <button class="btn btnd-lg btn-primary rateBtn" id="addPackage" type="button">Add Package</button>
+            <!--  <button class="btn btnd-lg btn-primary rateBtn" id="addPackage" type="button">Add Package</button>
             <button class="btn btnd-lg btn-primary rateBtn" onclick="window.location.href='/calculator'"
                 type="button">New Package</button> -->
         </div>

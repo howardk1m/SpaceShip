@@ -5,11 +5,15 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
 
-
-<!-- for the "calculate rates button" -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+	<!-- for the "calculate rates button" -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	{{!--
+	<link rel="stylesheet" href="style.css" /> --}}
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,17 +37,20 @@
 
 		<form id="packageForm">
 			<h4>Origin</h4>
-			<h6>  Fill in the sender's address. <br> <br> * indicates required fields</h6>
+			<h6> Fill in the sender's address. <br> <br> * indicates required fields</h6>
 			<div class="form__group field">
 				<div class="form_parts">
-					<input type="input" class="form__field" placeholder="Street Address" name="Street Address" id='Street Address' oninput="this.value = this.value.toUpperCase()"required />
+					<input type="input" class="form__field" placeholder="Street Address" name="Street Address"
+						id='fromaddress1' oninput="this.value = this.value.toUpperCase()" required />
 					<label for="Street Address" class="form__label">Street Address*</label>
 				</div>
 			</div>
 
 			<div class="form__group field">
 				<div class="form_parts">
-					<input type="input" class="form__field" placeholder="Apartment/Suite/Other" name="Apartment/Suite/Other"  oninput="this.value = this.value.toUpperCase()" id='Apartment/Suite/Other'  />
+					<input type="input" class="form__field" placeholder="Apartment/Suite/Other"
+						name="Apartment/Suite/Other" oninput="this.value = this.value.toUpperCase()"
+						id='fromaddress2' />
 					<label for="Apartment/Suite/Other" class="form__label">Apartment/Suite/Other</label>
 				</div>
 			</div>
@@ -53,27 +60,30 @@
 			<div class="form__group field">
 				<div class="form_parts oneline">
 					<div class="city">
-						<input type="input" class="form__field" placeholder="City" name="City" id='City' oninput="this.value = this.value.toUpperCase()" required />
+						<input type="input" class="form__field" placeholder="City" name="City" id='fromCity'
+							oninput="this.value = this.value.toUpperCase()" required />
 						<label for="City" class="form__label">City*</label>
 					</div>
-				<!-- </div> -->
+					<!-- </div> -->
 					<div class="state">
-						<input type="input" class="form__field" placeholder="State" name="State" id='State' oninput="this.value = this.value.toUpperCase()" required />
+						<input type="text" class="form__field" placeholder="State" name="State" id='fromState'
+							oninput="this.value = this.value.toUpperCase()" minlength="2" maxlength="2" required />
 						<label for="State" class="form__label">State*</label>
 					</div>
 					<div class="zip">
-						<input type="text" class="form__field" placeholder="Zipcode" min="0" pattern="\d*" name="Zipcode" id='Zipcode' minlength="5" maxlength="5" required />
+						<input type="number" class="form__field" placeholder="Zipcode" min="0" max="99999" pattern="\d*"
+							name="Zipcode" id='fromZip' minlength="5" maxlength="5" required />
 						<label for="Zipcode" class="form__label">Zipcode*</label>
 					</div>
 				</div>
 			</div>
 
 			<div class="form__group field oneline">
-				
+
 			</div>
 
 			<div class="form__group field oneline">
-				
+
 			</div>
 
 
@@ -82,14 +92,16 @@
 			<h6> Fill in the receiver's address. </h6>
 			<div class="form__group field">
 				<div class="form_parts">
-					<input type="input" class="form__field" placeholder="Street Address" name="Street Address" id='Street Address' oninput="this.value = this.value.toUpperCase()"required />
+					<input type="input" class="form__field" placeholder="Street Address" name="Street Address"
+						id='toaddress1' oninput="this.value = this.value.toUpperCase()" required />
 					<label for="Street Address" class="form__label">Street Address*</label>
 				</div>
 			</div>
 
 			<div class="form__group field">
 				<div class="form_parts">
-					<input type="input" class="form__field" placeholder="Apartment/Suite/Other" name="Apartment/Suite/Other"  oninput="this.value = this.value.toUpperCase()" id='Apartment/Suite/Other' />
+					<input type="input" class="form__field" placeholder="Apartment/Suite/Other"
+						name="Apartment/Suite/Other" oninput="this.value = this.value.toUpperCase()" id='toaddress2' />
 					<label for="Apartment/Suite/Other" class="form__label">Apartment/Suite/Other</label>
 				</div>
 			</div>
@@ -99,48 +111,54 @@
 			<div class="form__group field">
 				<div class="form_parts oneline">
 					<div class="city">
-						<input type="input" class="form__field" placeholder="City" name="City" id='City' oninput="this.value = this.value.toUpperCase()" required />
+						<input type="input" class="form__field" placeholder="City" name="City" id='toCity'
+							oninput="this.value = this.value.toUpperCase()" required />
 						<label for="City" class="form__label">City*</label>
 					</div>
-				<!-- </div> -->
+					<!-- </div> -->
 					<div class="state">
-						<input type="input" class="form__field" placeholder="State" name="State" id='State' oninput="this.value = this.value.toUpperCase()" required />
+						<input type="text" class="form__field" placeholder="State" name="State" id='toState'
+							oninput="this.value = this.value.toUpperCase()" minlength="2" maxlength="2" required />
 						<label for="State" class="form__label">State*</label>
 					</div>
 					<div class="zip">
-						<input type="text" class="form__field" placeholder="Zipcode" min="0" pattern="\d*" name="Zipcode" id='Zipcode' minlength="5" maxlength="5" required />
+						<input type="number" class="form__field" placeholder="Zipcode" min="0" max="99999" pattern="\d*"
+							name="Zipcode" id='toZip' minlength="5" maxlength="5" required />
 						<label for="Zipcode" class="form__label">Zipcode*</label>
 					</div>
 				</div>
 			</div>
 
 			<div class="form__group field oneline">
-				
+
 			</div>
 
 			<div class="form__group field oneline">
-				
+
 			</div>
 
 
 
-<!-- Add star banner to differentiate addresses and package dimensions -->
-			<span class="stars" style= "color:#738BD8"> ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆</span>
+			<!-- Add star banner to differentiate addresses and package dimensions -->
+			<span class="stars" style="color:#738BD8"> ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆</span>
 			<h4>Package Dimensions</h4>
-			<h6> Fill in shipping dimensions (measured in inches). </h6>
+			<h6> Fill in shipping dimensions (measured in <b><u>inches</u></b>). </h6>
 			<div class="form__group field">
 				<div class="form_parts oneline">
 					<div class="length">
-						<input type="number" class="form__field" placeholder="Length*" name="Length" id='Length' min="1" max="100" oninput="this.value = this.value.toUpperCase()" required />
-						<label for="Length" class="form__label">Length*</label>
+						<input type="number" class="form__field" placeholder="Length*" name="length" id='length' min="0"
+							max="100" oninput="this.value = this.value.toUpperCase()" required />
+						<label for="length" class="form__label">Length*</label>
 					</div>
-				<!-- </div> -->
+					<!-- </div> -->
 					<div class="width">
-						<input type="number" class="form__field" placeholder="Width*" name="width" id='width' min="1" max="100" oninput="this.value = this.value.toUpperCase()" required />
+						<input type="number" class="form__field" placeholder="Width*" name="width" id='width' min="0"
+							max="100" oninput="this.value = this.value.toUpperCase()" required />
 						<label for="width" class="form__label">Width*</label>
 					</div>
 					<div class="height">
-						<input type="number" class="form__field" placeholder="height" name="height" id='height' max="100" oninput="this.value = this.value.toUpperCase()" required />
+						<input type="number" class="form__field" placeholder="Height*" name="height" id='height' min="0"
+							max="100" oninput="this.value = this.value.toUpperCase()" required />
 						<label for="height" class="form__label">Height*</label>
 					</div>
 				</div>
@@ -152,12 +170,13 @@
 			<style>
 
 			</style>
-			<h6> Weight measured in ounces. </h6>
+			<h6> Weight measured in <b><u>ounces</u></b>. </h6>
 			<div class="form__group field">
 				<div class="form_parts oneline">
 					<div class="weight">
-						<input type="number" class="form__field" placeholder="Weight*" name="Weight" id='Weight' max="150" oninput="this.value = this.value.toUpperCase()" required />
-						<label for="Weight" class="form__label">Weight*</label>
+						<input type="number" class="form__field" placeholder="Weight*" name="weight" id='weight' min="1"
+							max="2400" oninput="this.value = this.value.toUpperCase()" required />
+						<label for="weight" class="form__label">Weight*</label>
 					</div>
 				</div>
 			</div>
@@ -165,16 +184,19 @@
 
 
 			<h4 class="options">Options</h4>
-			<h6> Insurance coverage protects against loss or damage and depends on item's declared value. Disclaimer: We are not liable for any lost or damaged package. </h6>
+			<h6> Insurance coverage protects against loss or damage based on the item's declared value. </br></br>
+				Note: With the exception to USPS Parcel Select, all services include basic insurance for values up to
+				$100. </h6>
 
 			<div class="checkboxes">
-				
+
 				<label>
-					<input type="checkbox" class="insCheck" style="font-weight: 900"> 
+					<input type="checkbox" class="insCheck" style="font-weight: 900">
 					Package Insurance
 				</label>
 				<div class="insValue">
-					<input id="value" type="number" placeholder="Package Value ($)" style="width: 100%" js-trim-chars="$ ">
+					<input id="value" type="number" placeholder="Package Value ($)" style="width: 100%"
+						js-trim-chars="$ ">
 				</div>
 				<script>
 
@@ -189,9 +211,9 @@
 				</script>
 			</div>
 
-				<div class="container">
-					<a href="/rates" class="btn">Calculate Rates</a>
-				</div>
+			<div class="container">
+				<button class="btn" type="submit">Calculate Rates</button>
+			</div>
 		</form>
 	</div>
 

@@ -12,7 +12,7 @@ header {
     left: 0;
     width: 100%;
     height: 70px;
-    font-size:14px
+    font-size:14px;
     letter-spacing: 2.1px;
     line-height:1.2;
     text-align:left;
@@ -36,8 +36,8 @@ header {
     flex-direction: row;
     justify-content: space-between;
     background-color: #2F3136;
-    /*padding: 0 2vw;*/
-    font-size:14px
+    padding: 0 4vw;
+    font-size:14px;
     letter-spacing: 2.1px;
     line-height:1.2;
     text-align:left;
@@ -57,18 +57,16 @@ header {
 .logo span {
     /*font-family; 'Open Sans', sans-serif;*/
     font-size: 14px;
-    /*position:absolute;*/
     font-weight: 800;
     color: white;
     /*background: ;*/
 }
 
 .menuBtn {
-    /*position: absolute;*/
     font-size: 14px;
     display: flex;
     align-items: center;
-    /*justify-: end;*/
+    /*justify-self: end;*/
     color: white;
 }
 
@@ -180,7 +178,7 @@ form {
 }
 
 input {
-    /*border-radius: 5px 5px 5px 5px; /*edges of the input boxes*/ */
+    /*border-radius: 5px 5px 5px 5px; */
     margin: 5px;
     font-size: 1.2rem;
     /*font-size: 12px;*/
@@ -422,10 +420,11 @@ select {
      /*color:white;*/
      /*height: 100vh;*/
 }
-a {
+button {
+     all:unset;
      font-size: 1.5rem;
      padding: 1rem 3rem;
-     color: white;*/
+     color: white;
      /*text-transform: uppercase;*/
 }
 .btn {
