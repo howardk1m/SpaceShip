@@ -26,6 +26,7 @@ function getRates(from, to, package) {
         var resJSON = JSON.parse(res);
         if (resJSON.rate_response) {
             window.location.href = "/rates";
+            // console.log(res);
         } else {
             if (resJSON.errors){
                 alert(resJSON.errors[0].message);

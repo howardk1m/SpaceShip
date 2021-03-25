@@ -11,10 +11,10 @@ const myHeaders = {
 // carrier array (in order) -> USPS, UPS, Fedex
 const carrier = ["se-553570", "se-553571", "se-553572"];
 // delivery service array
-const service = ["usps_parcel_select", "usps_priority_mail",
-  "usps_priority_mail_express", "fedex_express_saver",
-  "fedex_2day", "fedex_standard_overnight", "ups_ground",
-  "ups_3_day_select", "ups_2nd_day_air", "ups_next_day_air_saver"];
+const service = ["usps_first_class_mail", "usps_parcel_select", 
+  "usps_priority_mail", "usps_priority_mail_express", 
+  "fedex_express_saver","fedex_2day", "fedex_standard_overnight", 
+  "ups_ground", "ups_3_day_select", "ups_2nd_day_air", "ups_next_day_air_saver"];
 // package types
 const package_types = ["package"];
 
