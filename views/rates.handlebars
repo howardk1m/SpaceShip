@@ -11,7 +11,7 @@
     <!-- use Open Sans as main font. import from google  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
-
+    
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -73,16 +73,20 @@
                 <p style="margin: 0.25rem 0;"><b><u>Service Cost</u>: </b>${{shipping_amount.amount}}</p>
                 {{#if insurance_amount.amount}}
                 <p style="margin: 0.25rem 0;"><b><u>Insurance Cost</u>: </b>${{insurance_amount.amount}}</p>
+                <p class="ups_ins" style="margin: 0.25rem 0; display:none"><b><u>Insurance Cost</u>:
+                    </b>${{other_amount.amount}}</p>
                 {{/if}}
             </div>
             <script data={{carrier_code}}>
                 var img = document.getElementsByClassName("carrierimg")[{{@index}}];
+                var ins = document.getElementsByClassName("ups_ins")[{{@index}}];
                 if (document.currentScript.getAttribute('data') === "stamps_com") {
                     img.setAttribute("src", "https://mailomg.files.wordpress.com/2017/09/usps_eagle-symbol.png");
                 } else if (document.currentScript.getAttribute('data') == "fedex") {
                     img.setAttribute("src", "https://4.bp.blogspot.com/-8qFlLqWHhqI/U6gzRjwnayI/AAAAAAAAgPo/miK3bshfv_k/s1600/FedEx+logo+1994.png");
                 } else if (document.currentScript.getAttribute('data') == "ups") {
                     img.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/1200px-United_Parcel_Service_logo_2014.svg.png");
+                    ins.setAttribute("style", "margin: 0.25rem 0;");
                 }
             </script>
         </div>
