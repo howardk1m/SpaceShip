@@ -5,10 +5,9 @@ $(document).ready(function () {
 function initializePage() {
     console.log("Page Loaded");
 
-    if (localStorage.loginState != null) {
+    // if (localStorage.loginState != null) {
         changeUser();
-    } 
-    // else {
+    // } else {
     //     $("hr").hide();
     //     $("nav").hide();
     // }
@@ -58,9 +57,9 @@ function changeUser() {
     }
 
     // $(".Login").hide();
-    $("hr").show();
-    getNav();
-    $("nav").show();
+    // $("hr").show();
+    // getNav();
+    // $("nav").show();
     // $("#profile-img").attr("src", localStorage.userPic)
     // $("#greeting").text("Hello " + localStorage.userName + "!");
 }
@@ -79,11 +78,11 @@ function changeUser() {
 //     $("#greeting").text("");
 // }
 
-function getNav() {
+// function getNav() {
 
-    var navHTML = '<a href="/calculator">Shipping Calculator</a>' +
-        '<a href="/mypackages">My Packages</a>' ;
-        // + '<a onclick="logout();">Logout</a>';
+//     var navHTML = '<a href="/calculator">Shipping Calculator</a>' +
+//         '<a href="/mypackages">My Packages</a>' +
+//         '<a onclick="logout();">Logout</a>';
 
-    $(".navCol").html(navHTML);
-}
+//     $(".navCol").html(navHTML);
+// }
