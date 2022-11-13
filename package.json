@@ -12,17 +12,17 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.5",
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
     "errorhandler": "^1.5.1",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.1",
-    "express-session": "^1.17.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^5.3.5",
+    "express-session": "^1.17.3",
     "method-override": "^3.0.0",
-    "mongodb": "*",
-    "mongoose": "^5.11.19",
+    "mongodb": "^4.11.0",
+    "mongoose": "^5.13.15",
     "morgan": "^1.10.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "serve-favicon": "^2.5.0"
   },
   "engines": {
